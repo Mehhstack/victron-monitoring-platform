@@ -20,7 +20,7 @@ Displays all sites in a single view:
 - System status (online/offline)
 - Alerts summary
 
-![Global Dashboard](../screenshots/global-dashboard.png)
+![Global Dashboard](https://github.com/Mehhstack/victron-monitoring-platform/blob/main/grafana-dashboards/victron%20unified%20dash.png)
 
 ---
 
