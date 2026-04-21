@@ -6,7 +6,7 @@ The monitoring stack is deployed on a virtual machine using Docker containers.
 This allows:
 - Easy deployment and updates
 - Isolation of services
-- Scalability for multiple sites
+- Scalability
 
 ---
 
@@ -20,14 +20,14 @@ This allows:
 
 ## Architecture
 
-Victron GX → Node-RED → InfluxDB (VM) → Grafana (VM)
+Raspberry Pi(VenusOS) → Node-RED → InfluxDB (Docker Container) → Grafana (Docker Container)
 
 ---
 
 ## Environment
 
-- VM hosted on: (add your provider or "local hypervisor")
-- OS: Ubuntu Server (or what you used)
+- VM hosted on: Proxmox
+- OS: Debian 12
 - Docker installed and configured
 
 ---
