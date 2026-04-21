@@ -72,5 +72,4 @@ Adjust duration based on your storage capacity on the Raspberry Pi.
 
 ## Notes
 - All credentials and database names in config files have been sanitized for security.
-- InfluxDB runs locally on the Raspberry Pi — data never leaves the site unless explicitly exported.
 - Grafana connects to InfluxDB via the local network using the HTTP API.
