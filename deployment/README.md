@@ -87,37 +87,4 @@ volumes:
   grafana_data:
 ```
 
-### Starting the Stack
-
-```bash
-docker-compose up -d
-```
-
-### Checking Container Status
-
-```bash
-docker ps
-docker-compose logs -f
-```
-
 ---
-
-## Screenshots
-
-| What to capture | Where to add it |
-|---|---|
-| Proxmox dashboard with VM visible | `screenshots/proxmox-vm-overview.png` |
-| Docker containers running (`docker ps` or Portainer) | `screenshots/docker-containers-running.png` |
-| Grafana login or main dashboard | `screenshots/grafana-dashboard.png` |
-| InfluxDB data explorer showing incoming data | `screenshots/influxdb-data.png` |
-
-> Create a `screenshots/` folder in this directory and drop your images in there, then the
-> image links above will render automatically on GitHub.
-
----
-
-## Notes
-- All credentials and environment variables have been sanitized for security.
-- InfluxDB data persists via Docker named volumes — data survives container restarts.
-- Grafana runs on port `3000` and InfluxDB on port `8086` — ensure your VM firewall allows
-  access from your local network.
