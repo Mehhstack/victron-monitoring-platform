@@ -27,7 +27,7 @@ Victron GX → Node-RED → InfluxDB
 ## Example Flows
 
 ![Node-RED Flows](https://github.com/Mehhstack/victron-monitoring-platform/blob/main/node-red/node-red%20battery%20flow.png)
-(https://github.com/Mehhstack/victron-monitoring-platform/blob/main/node-red/node-red%20solar%20charger%20flow.png)
+![Node-RED Flows](https://github.com/Mehhstack/victron-monitoring-platform/blob/main/node-red/node-red%20solar%20charger%20flow.png)
 ---
 
 ## Key Logic
