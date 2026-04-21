@@ -3,7 +3,7 @@
 ## Overview
 This project demonstrates a scalable and cost-effective monitoring solution for distributed solar infrastructure using Victron devices.
 
-## Why We Built This
+## Why I Built This
 
 ### Cost-Effective at Scale
 Victron VRM is a solid cloud platform, but the costs grow fast when you're managing multiple sites. By running everything on **Raspberry Pis** — affordable, low-power single-board computers — we dramatically cut infrastructure costs without sacrificing visibility. A Raspberry Pi can run Node-RED, InfluxDB, and Grafana simultaneously for a fraction of what cloud-hosted alternatives cost per site.
@@ -50,6 +50,3 @@ A Raspberry Pi-based solution was implemented to collect and visualize data:
 2. Setup InfluxDB database
 3. Import Grafana dashboards
 4. Configure alerts
-
-## Notes
-All configs are sanitized for security.
