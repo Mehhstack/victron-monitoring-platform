@@ -24,10 +24,10 @@ Victron GX → Node-RED → InfluxDB
 
 ---
 
-## Example Flow
+## Example Flows
 
 ![Node-RED Flows](https://github.com/Mehhstack/victron-monitoring-platform/blob/main/node-red/node-red%20battery%20flow.png)
-
+(https://github.com/Mehhstack/victron-monitoring-platform/blob/main/node-red/node-red%20solar%20charger%20flow.png)
 ---
 
 ## Key Logic
@@ -35,11 +35,3 @@ Victron GX → Node-RED → InfluxDB
 - Polls Victron data at intervals
 - Transforms data into structured JSON
 - Sends via HTTP or direct InfluxDB integration
-
----
-
-## Notes
-
-- Designed to be lightweight and reliable
-- Can operate in low connectivity environments
-- Easily extendable for additional metrics
