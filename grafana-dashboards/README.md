@@ -31,7 +31,7 @@ Detailed metrics for a single tower:
 - Load consumption
 - Historical trends
 
-![Site Dashboard](../screenshots/site-dashboard.png)
+![Site Dashboard](https://github.com/Mehhstack/victron-monitoring-platform/blob/main/grafana-dashboards/victron%20per%20site%20dash.png)
 
 ---
 
