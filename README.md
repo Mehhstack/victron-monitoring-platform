@@ -14,7 +14,7 @@ This is the big one. If the **Victron VRM site or API goes down**, most cloud-de
 - All data is stored on-site in InfluxDB
 - Grafana dashboards remain fully accessible on the local network
 - Alerting continues to function regardless of internet connectivity
-- You are never dependent on a third-party uptime to monitor your own infrastructure
+- You are never dependent on a third-party uptime to monitor your own infrastructure on the Raspberry Pi
 
 This is critical for solar sites in remote areas or where internet reliability is inconsistent.
 
