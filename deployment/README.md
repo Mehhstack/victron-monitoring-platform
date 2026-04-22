@@ -27,7 +27,7 @@ This allows:
 
 The LXC is provisioned inside Proxmox VE. Below is the VM as it appears in the Proxmox dashboard:
 
-> 📸 **Screenshot:** Proxmox dashboard showing the monitoring VM (status, CPU, memory allocation)
+> 📸 **Screenshot:** Proxmox dashboard showing the monitoring LXC (status, CPU, memory allocation)
 
 ![Proxmox VM Overview](https://github.com/Mehhstack/victron-monitoring-platform/blob/main/deployment/proxmox-LXC.png)
 
