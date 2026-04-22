@@ -109,7 +109,7 @@ Settings → System Setup → Battery Monitor → Select Pylontech
 
 > 📸 VenusOS showing Pylontech battery detected with SOC, voltage, and cell data
 
-![Pylontech Detected](screenshots/pylontech-detected.png)
+![Pylontech Detected](https://github.com/Mehhstack/victron-monitoring-platform/blob/main/Raspberry%20Pi/pylontech%20with%20VenusOS.png)
 
 ---
 
