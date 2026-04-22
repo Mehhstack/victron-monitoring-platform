@@ -43,10 +43,4 @@ A Raspberry Pi-based solution was implemented to collect and visualize data:
 - **Fully local — works when VRM/internet is down**
 
 ## Screenshots
-(Add your Grafana screenshots here)
-
-## Setup
-1. Configure Node-RED on Victron GX
-2. Setup InfluxDB database
-3. Import Grafana dashboards
-4. Configure alerts
+![Grafana Dasboard](https://github.com/Mehhstack/victron-monitoring-platform/blob/main/grafana-dashboards/victron%20unified%20dash.png)
