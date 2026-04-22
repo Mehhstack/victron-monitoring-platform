@@ -13,7 +13,7 @@ This is the big one. If the **Victron VRM site or API goes down**, most cloud-de
 
 - All data is stored on-site in InfluxDB
 - Grafana dashboards remain fully accessible on the local network
-- Alerting continues to function regardless of internet connectivity
+- Alerting continues to function regardless of internet connectivity on the Raspberry Pi
 - You are never dependent on a third-party uptime to monitor your own infrastructure on the Raspberry Pi
 
 This is critical for solar sites in remote areas or where internet reliability is inconsistent.
@@ -24,11 +24,11 @@ VRM's dashboards are good but opinionated. Running our own Grafana instance give
 ---
 
 ## Problem
-Victron VRM is powerful but becomes costly and less flexible when scaling across multiple sites. There is also limited customization for unified dashboards and alerting.
+Victron VRM is powerful but becomes costly due to the gateway that you need to buy and less flexible when wanting more customization per site. There is also limited customization on the VRM dashboard per site and alerting. This allow you to create dashboards that only shows information that you need and less cluttered.
 
 ## Solution
 A Raspberry Pi-based solution was implemented to collect and visualize data:
-- Victron GX device running Node-RED
+- Raspberry Pi running VenusOS and Node-RED
 - Node-RED sends telemetry data to InfluxDB
 - InfluxDB stores time-series data
 - Grafana provides centralized dashboards and alerting
