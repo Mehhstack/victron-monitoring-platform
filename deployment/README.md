@@ -27,8 +27,6 @@ This allows:
 
 The LXC is provisioned inside Proxmox VE. Below is the VM as it appears in the Proxmox dashboard:
 
-> 📸 **Screenshot:** Proxmox dashboard showing the monitoring LXC (status, CPU, memory allocation)
-
 ![Proxmox VM Overview](https://github.com/Mehhstack/victron-monitoring-platform/blob/main/deployment/proxmox-LXC.png)
 
 ---
@@ -49,9 +47,6 @@ The LXC is provisioned inside Proxmox VE. Below is the VM as it appears in the P
 
 Both services are managed as Docker containers. The screenshot below shows the running containers
 and their health status:
-
-> 📸 **Screenshot:** Docker container panel showing influxdb and grafana containers running
-> (use `docker ps` output, Portainer, or your container management UI)
 
 ![Docker Containers Running](https://github.com/Mehhstack/victron-monitoring-platform/blob/main/deployment/docker-management.png)
 
