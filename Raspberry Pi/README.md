@@ -82,24 +82,15 @@ Do not connect to a network switch.
 ### CAN Interface Configuration
 
 ```bash
-auto can0
-iface can0 inet manual
-    pre-up /sbin/ip link set can0 type can bitrate 500000
-    up /sbin/ifconfig can0 up
-    down /sbin/ifconfig can0 down
+nano /u-boot/config.txt
+[all]
+dtparam=spi=on
+dtoverlay=mcp2515-can0,oscillator=12000000,interrupt=25,spimaxfrequency=2000000
 ```
 
 > Pylontech CAN bitrate is **500 kbps**.
 
-### Verify CAN is Working
-
-```bash
-ip link show can0
-candump can0    # Should show frames from Pylontech if wired correctly
-```
-
-Once active, VenusOS auto-detects the battery:
-Settings → System Setup → Battery Monitor → Select Pylontech
+![VenusOS CAN configure](https://github.com/Mehhstack/victron-monitoring-platform/blob/main/Raspberry%20Pi/VenusOS%20CAN-bus.png)
 
 ### Screenshots
 
