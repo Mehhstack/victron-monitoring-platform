@@ -1,4 +1,4 @@
-# Deployment (Docker on VM)
+# Deployment (Docker on LXC)
 
 ## Overview
 The monitoring stack is deployed on a virtual machine using Docker containers hosted on a Proxmox server.
@@ -16,20 +16,20 @@ This allows:
 | Component | Detail |
 |---|---|
 | Hypervisor | Proxmox VE |
-| VM OS | Debian 12 |
+| LXC OS | Debian 12 |
 | Container Runtime | Docker + Docker Compose |
 | InfluxDB | v2.0 |
 | Grafana | Latest stable |
 
 ---
 
-## Proxmox VM
+## Proxmox LXC
 
-The VM is provisioned inside Proxmox VE. Below is the VM as it appears in the Proxmox dashboard:
+The LXC is provisioned inside Proxmox VE. Below is the VM as it appears in the Proxmox dashboard:
 
 > 📸 **Screenshot:** Proxmox dashboard showing the monitoring VM (status, CPU, memory allocation)
 
-![Proxmox VM Overview](screenshots/proxmox-vm-overview.png)
+![Proxmox VM Overview](https://github.com/Mehhstack/victron-monitoring-platform/blob/main/deployment/proxmox-LXC.png)
 
 ---
 
@@ -53,7 +53,7 @@ and their health status:
 > 📸 **Screenshot:** Docker container panel showing influxdb and grafana containers running
 > (use `docker ps` output, Portainer, or your container management UI)
 
-![Docker Containers Running](screenshots/docker-containers-running.png)
+![Docker Containers Running](https://github.com/Mehhstack/victron-monitoring-platform/blob/main/deployment/docker-management.png)
 
 ---
 
