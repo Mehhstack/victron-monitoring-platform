@@ -40,20 +40,14 @@ GX device.
 
 ### Installation
 
-Download the latest image from the [Victron Venus GitHub](https://github.com/victronenergy/venus)
-and flash it to an SD card:
+Download the latest VenusOS Large image from the [Victron Venus site](https://updates.victronenergy.com/feeds/venus/candidate/images/raspberrypi2/)
 
-```bash
-sudo dd if=venus-image-raspberrypi4.wic.gz of=/dev/sdX bs=4M status=progress
-```
-
-Or use Balena Etcher / Raspberry Pi Imager.
+Use Balena Etcher / Raspberry Pi Imager.
 
 ### Key Settings After First Boot
 
-- **Node-RED:** Settings → Venus OS Large → Install large image
-- **MQTT:** Settings → Services → MQTT on LAN → Enable
-- **SSH:** Settings → General → SSH → Enable
+- **Install Node-RED:**
+- **Enable Super User and setup SSH** 
 
 ### Screenshots
 
@@ -109,12 +103,3 @@ dtoverlay=mcp2515-can0,oscillator=12000000,interrupt=25,spimaxfrequency=2000000
 > 📸 Raspberry Pi with CAN HAT — as deployed on site
 
 ![Pi Hardware Setup](https://github.com/Mehhstack/victron-monitoring-platform/blob/main/Raspberry%20Pi/Raspberry%20Pi%20with%20HAT.jpg)
----
-
-## Notes
-
-- Use a quality SD card (Samsung Endurance Pro or similar) — VenusOS writes frequently
-- Ethernet is strongly preferred over WiFi for reliability on site
-- If stacking multiple Pylontech batteries, set one as **master** using the DIP switches
-- VRM connectivity is optional — everything runs fully offline without it
-- Label all cables at installation — saves time during troubleshooting
