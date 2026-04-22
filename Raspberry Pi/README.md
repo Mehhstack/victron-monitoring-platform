@@ -12,7 +12,7 @@ devices, and integrates Pylontech batteries via a CAN HAT.
 
 | Feature | Raspberry Pi + VenusOS | Victron Cerbo GX |
 |---|---|---|
-| Cost | ~$50–80 | ~$200–250 |
+| Cost | ~R725.70–R922.70 | ~R3400–R3900 |
 | VenusOS support | ✅ Full | ✅ Native |
 | Custom integrations | ✅ SSH, Node-RED, scripts | ⚠️ Limited |
 | CAN HAT support | ✅ With HAT | ✅ Built-in |
@@ -30,6 +30,7 @@ devices, and integrates Pylontech batteries via a CAN HAT.
 | Connectivity | [3 Port USB 2.0 Hub HAT with Ethernet](https://www.pishop.co.za/store/ethernet--usb-hub-hat-b-for-raspberry-pi-series-1x-rj45-3x-usb-20?keyword=3%20Port%20USB%202.0%20Hub%20HAT%20with%20Ethernet&category_id=0) |
 | Power | 5V USB |
 | Case | ![Acrylic Case With Heatsink](https://www.pishop.co.za/store/clear-acrylic-case-with-heatsink-for-raspberry-pi-zero) |
+|SD Card | ![SanDisk Ultra 32GB](https://www.pishop.co.za/store/sandisk-ultra-microsdhc-32gb-uhs-i-100mbs-class10?keyword=SD%20card%2032gb&category_id=0) |
 
 ---
 
