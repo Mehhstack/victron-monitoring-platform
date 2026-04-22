@@ -59,7 +59,7 @@ Or use Balena Etcher / Raspberry Pi Imager.
 
 > 📸 VenusOS Remote Console showing connected devices and system overview
 
-![VenusOS Dashboard](screenshots/venus-dashboard.png)
+![VenusOS Dashboard](https://github.com/Mehhstack/victron-monitoring-platform/blob/main/Raspberry%20Pi/VenusOS%20dash.png)
 
 ---
 
