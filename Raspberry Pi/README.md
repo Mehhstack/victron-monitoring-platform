@@ -23,12 +23,13 @@ devices, and integrates Pylontech batteries via a CAN HAT.
 
 | Component | Detail |
 |---|---|
-| Board | [Raspberry Pi Zero 2W](https://www.diyelectronics.co.za/store/boards/5401-raspberry-pi-zero-2-w-rp3a0-microcontroller.html) |
+| Board | [Raspberry Pi Zero 2W](https://www.pishop.co.za/store/raspberry-pi-zero-2-wh-with-pre-soldered-header) |
 | OS | VenusOS (Victron) |
-| CAN Interface | [Waveshare RS485 CAN HAT](https://www.diyelectronics.co.za/store/hats/2364-rs485-can-hat-for-raspberry-pi.html?utm_campaign=google_shopping&utm_source=cpc&utm_medium=evergreen&utm_content=20485427402&gad_source=1&gad_campaignid=20489613595&gbraid=0AAAAADpm0I-TOvf0zgzj9XkgU3KdXbsJO&gclid=CjwKCAjw46HPBhAMEiwASZpLRJjuc576oQeG9BBj6ytX8fWCuS43gNeXfje1MNEHIwXW3vGT--fDbRoCao8QAvD_BwE) |
+| CAN Interface | [Waveshare RS485 CAN HAT](https://www.diyelectronics.co.za/store/hats/2364-rs485-can-hat-for-raspberry-pi.html?utm_campaign=google_shopping&utm_source=cpc&utm_medium=evergreen&utm_content=20485427402&gad_source=1&gad_campaignid=20489613595&gbraid=0AAAAADpm0I-TOvf0zgzj9XkgU3KdXbsJO&gclid=CjwKCAjw46HPBhAMEiwASZpLRJjuc576oQeG9BBj6ytX8fWCuS43gNeXfje1MNEHIwXW3vGT--fDbRoCao8QAvD_BwE) **Only needed if you want to connect VE.CAN devices** |
 | Battery | Pylontech US2000 / US3000 / UPS2500 |
-| Connectivity | [3 Port USB 2.0 Hub HAT with Ethernet](https://www.diyelectronics.co.za/store/hats/3830-3-port-usb-20-hub-hat-with-ethernet-for-raspberry-pi.html) |
+| Connectivity | [3 Port USB 2.0 Hub HAT with Ethernet](https://www.pishop.co.za/store/ethernet--usb-hub-hat-b-for-raspberry-pi-series-1x-rj45-3x-usb-20?keyword=3%20Port%20USB%202.0%20Hub%20HAT%20with%20Ethernet&category_id=0) |
 | Power | 5V USB |
+| Case | ![Acrylic Case With Heatsink](https://www.pishop.co.za/store/clear-acrylic-case-with-heatsink-for-raspberry-pi-zero) |
 
 ---
 
