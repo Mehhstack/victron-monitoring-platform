@@ -25,7 +25,7 @@ devices, and integrates Pylontech batteries via a CAN HAT.
 |---|---|
 | Board | Raspberry Pi Zero 2W |
 | OS | VenusOS (Victron) |
-| CAN Interface | [Waveshare RS485 CAN HAT]([https://docs.github.com](https://www.diyelectronics.co.za/store/hats/2364-rs485-can-hat-for-raspberry-pi.html?utm_campaign=google_shopping&utm_source=cpc&utm_medium=evergreen&utm_content=20485427402&gad_source=1&gad_campaignid=20489613595&gbraid=0AAAAADpm0I-TOvf0zgzj9XkgU3KdXbsJO&gclid=CjwKCAjw46HPBhAMEiwASZpLRJjuc576oQeG9BBj6ytX8fWCuS43gNeXfje1MNEHIwXW3vGT--fDbRoCao8QAvD_BwE)) |
+| CAN Interface | [Waveshare RS485 CAN HAT](https://www.diyelectronics.co.za/store/hats/2364-rs485-can-hat-for-raspberry-pi.html?utm_campaign=google_shopping&utm_source=cpc&utm_medium=evergreen&utm_content=20485427402&gad_source=1&gad_campaignid=20489613595&gbraid=0AAAAADpm0I-TOvf0zgzj9XkgU3KdXbsJO&gclid=CjwKCAjw46HPBhAMEiwASZpLRJjuc576oQeG9BBj6ytX8fWCuS43gNeXfje1MNEHIwXW3vGT--fDbRoCao8QAvD_BwE) |
 | Battery | Pylontech US2000 / US3000 / UPS2500 |
 | Connectivity | Ethernet (preferred) |
 | Power | 5V USB |
