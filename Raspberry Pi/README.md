@@ -117,8 +117,7 @@ Settings → System Setup → Battery Monitor → Select Pylontech
 
 > 📸 Raspberry Pi with CAN HAT — as deployed on site
 
-![Pi Hardware Setup](screenshots/pi-hardware-setup.png)
-
+![Pi Hardware Setup](https://github.com/Mehhstack/victron-monitoring-platform/blob/main/Raspberry%20Pi/Raspberry%20Pi%20with%20HAT.jpg)
 ---
 
 ## Notes
