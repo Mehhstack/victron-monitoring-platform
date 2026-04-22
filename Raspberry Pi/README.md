@@ -64,14 +64,18 @@ allowing VenusOS to read SOC, voltage, current, cell temps, and charge/discharge
 
 ### Wiring
 
+Victron has a dedicated ![guide](https://www.victronenergy.com/live/battery_compatibility:pylontech_phantom) on how to setup different models of the pylontech batteries for you victron system. Choose the right battery and correct wiring other wise the battery will not show up on the device list. 
+
 Pylontech uses an RJ45 CAN port — same connector as Ethernet but **not** Ethernet.
 Do not connect to a network switch.
 
-| RJ45 Pin | Signal | CAN HAT Terminal |
+This is for the **Pylontech UP2500**
+
+| Function | Victron VE.CAN side | CAN HAT Terminal |
 |---|---|---|
-| Pin 1 | CAN-H | CAN H |
-| Pin 2 | CAN-L | CAN L |
-| Pin 7 | GND | GND |
+| GND | RJ45 Pin 3 | GND |
+| CAN-L | RJ45 Pin 8 | CAN-L |
+| CAN-H | RJ45 Pin 7 | CAN-H |
 
 ### CAN Interface Configuration
 
