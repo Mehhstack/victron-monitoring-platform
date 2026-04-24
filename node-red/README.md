@@ -3,29 +3,49 @@
 ## Purpose
 
 Node-RED runs directly on the Raspberry Pi (VenusOS) and reads live data from the
-devices connected to it — the battery monitor and solar charger. It formats that data
-and writes it to InfluxDB where Grafana picks it up for dashboards and alerting.
+devices connected to it — the Pylontech battery and solar charger. It formats that
+data and writes it to InfluxDB where Grafana picks it up for dashboards and alerting.
 
 Without Node-RED, there is no data pipeline — it is the engine of the whole platform.
 
 ---
 
+## Data Flow
+
+```
+Pylontech Battery / Solar Charger (Victron input nodes)
+        │
+        ▼
+   Join Node (waits for all readings)
+        │
+        ▼
+  Function Node (structures payload)
+        │
+        ▼
+   InfluxDB Server
+```
+
 ---
 
 ## What It Collects
 
-### Battery Monitor
-| Metric | Description |
-|---|---|
-| Battery voltage | Voltage of the battery bank in volts |
-| Battery current | Charge or discharge current in amps |
-| State of charge | Battery percentage remaining |
+### Battery Stats
 
-### Solar Charger
-| Metric | Description |
+| Metric | Unit |
 |---|---|
-| PV power | Live solar output in watts |
-| Daily yield | Total solar energy produced today in kWh |
+| Battery power | W |
+| Battery current | A |
+| Battery temperature | °C |
+| Battery voltage | V |
+| State of charge | % |
+| Capacity | Ah |
+
+### Solar Charger Stats
+
+| Metric | Unit |
+|---|---|
+| PV power output | W |
+| Daily solar yield | kWh |
 | Charger state | Bulk / Absorption / Float / Off |
 
 ---
@@ -34,51 +54,39 @@ Without Node-RED, there is no data pipeline — it is the engine of the whole pl
 
 ### Battery Flow
 
-Reads battery monitor data directly from the Pi and writes voltage, current,
-and SOC to InfluxDB on each update.
+![Battery Flow](node-red%20battery%20flow.png)
 
-![Node-RED Battery Flow](node-red%20battery%20flow.png)
+Six Victron input nodes read directly from the Pylontech battery over the local
+device connection on the Pi — one node per metric. All six feed into a **join node**
+configured in manual mode, which waits until it has received a message from all six
+inputs before passing anything downstream.
+
+This is intentional — it ensures every write to InfluxDB is a complete record
+containing all six metrics together, rather than six separate partial writes arriving
+at different timestamps. Without this, cross-metric queries in Grafana become
+unreliable as readings for the same moment are scattered across multiple data points.
+
+The **function node** then takes the combined object, parses each value with
+`parseFloat` to ensure clean numeric types, structures them into a single payload,
+and sets `msg.measurement = "battery"` before writing to InfluxDB.
+
+---
 
 ### Solar Charger Flow
 
-Reads solar charger data from the Pi and writes PV power output and daily
-yield to InfluxDB.
+![Solar Charger Flow](node-red%20solar%20charger%20flow.png)
 
-![Node-RED Solar Charger Flow](node-red%20solar%20charger%20flow.png)
+The solar charger flow follows the same pattern — Victron input nodes feed into a
+join node, which waits for a complete set of readings before the function node
+structures and forwards the payload to InfluxDB.
 
 ---
 
 ## Key Logic
 
-- **Victron input nodes** — reads live data directly from connected devices on the Pi
-- **Filter** — drops null or invalid readings before they reach the database
-- **Transform** — formats raw values into tagged JSON with `site_name` and `device_id`
-- **InfluxDB out** — writes the structured payload to the correct measurement
-
-### Example Payload
-
-```json
-{
-  "measurement": "battery_voltage",
-  "tags": {
-    "site_name": "Tower-01",
-    "device_id": "gx-001"
-  },
-  "fields": {
-    "value": 52.3
-  },
-  "timestamp": "2024-01-15T10:30:00Z"
-}
-```
-
----
-
-## Setup
-
-1. Install Node-RED via VenusOS Large image
-   `Settings → Venus OS Large → Install`
-2. Open Node-RED at `http://<pi-ip>:1881`
-3. Import the flow files from this folder
-4. Update the `site_name` and `device_id` variables to match your site
-5. Update the InfluxDB node with your database IP and credentials
-6. Deploy and verify data is arriving in InfluxDB
+| Node | Role |
+|---|---|
+| Victron input nodes | Reads live data directly from connected devices on the Pi |
+| Join node | Holds all messages until a complete set of readings is available |
+| Function node | Parses values, structures payload, sets measurement name |
+| InfluxDB out | Writes the complete structured payload to InfluxDB |
