@@ -66,9 +66,13 @@ containing all six metrics together, rather than six separate partial writes arr
 at different timestamps. Without this, cross-metric queries in Grafana become
 unreliable as readings for the same moment are scattered across multiple data points.
 
+![Battery flow join](https://github.com/Mehhstack/victron-monitoring-platform/blob/main/node-red/battery-flow-join.png)
+
 The **function node** then takes the combined object, parses each value with
 `parseFloat` to ensure clean numeric types, structures them into a single payload,
 and sets `msg.measurement = "battery"` before writing to InfluxDB.
+
+![Battery flow function](https://github.com/Mehhstack/victron-monitoring-platform/blob/main/node-red/battery-flow-function.png)
 
 ---
 
