@@ -78,12 +78,15 @@ and sets `msg.measurement = "battery"` before writing to InfluxDB.
 
 ### Solar Charger Flow
 
-![Solar Charger Flow](node-red%20solar%20charger%20flow.png)
-
 The solar charger flow follows the same pattern — Victron input nodes feed into a
 join node, which waits for a complete set of readings before the function node
 structures and forwards the payload to InfluxDB.
 
+![Solar Charger Flow](node-red%20solar%20charger%20flow.png)
+
+![Solar charger join](https://github.com/Mehhstack/victron-monitoring-platform/blob/main/node-red/solar-charger-join.png)
+
+![Solar charger function](https://github.com/Mehhstack/victron-monitoring-platform/blob/main/node-red/solar-charger-function.png)
 ---
 
 ## Key Logic
